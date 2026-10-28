@@ -68,6 +68,14 @@ python run_experiment.py --stage cnn-features
 
 首次提取 CNN 特征时，torchvision 会下载 ImageNet 预训练 ResNet18 权重，需要网络连接。GPU 通常能明显缩短 CNN 特征提取时间；CPU 也可运行，但耗时较长。生成的审计文件位于 `analysis_cp_child/`，实验文件位于 `experiments/reproduced/`；这些本地生成文件不纳入 Git。
 
+如果权重下载报 `invalid hash value`，请检查网络后重试。也可以将从 [PyTorch 官方地址](https://download.pytorch.org/models/resnet18-f37072fd.pth)取得的 `resnet18-f37072fd.pth` 放入项目的 `.cache/torch/checkpoints/`；手动放入前请验证文件的 SHA-256 为 `f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec`，不要使用校验失败的文件。
+
+在项目根目录计算该文件的哈希：
+
+```bash
+python -c "import hashlib; print(hashlib.sha256(open('.cache/torch/checkpoints/resnet18-f37072fd.pth', 'rb').read()).hexdigest())"
+```
+
 ## 四、运行融合方法 Notebook
 
 完成上面的数据准备后，为 Jupyter 注册环境并启动：
