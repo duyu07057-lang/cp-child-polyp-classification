@@ -1,0 +1,12 @@
+# Tested numerical stack (Python 3.10); install matching torch/torchvision separately.
+numpy==1.26.3
+pandas==2.2.3
+Pillow==10.2.0
+scipy==1.14.1
+scikit-learn==1.5.1
+scikit-image==0.24.0
+matplotlib==3.9.2
+joblib==1.6.0
+pytest>=8,<10
+ipykernel>=6,<7
+notebook>=7,<8

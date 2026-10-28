@@ -1,0 +1,16 @@
+.venv/
+.venv_gpu/
+__pycache__/
+.pytest_cache/
+.cache/
+*.pyc
+/experiments/*
+/6.Colonoscopy_CP_CHILD.zip
+/6.Colonoscopy_CP_CHILD/
+/analysis_cp_child/*
+!/analysis_cp_child/audit_dataset.py
+/notebooks/*.html
+/_clone_verification*/
+notebook_outputs/
+notebooks/.runtime/
+.ipynb_checkpoints/

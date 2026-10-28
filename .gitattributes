@@ -1,0 +1,16 @@
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.npy binary
+*.pt binary
+*.joblib binary
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+*.ipynb text eol=lf
+*.html text eol=lf
+*.ps1 text eol=lf
+# Preserve recorded hashes of original experiment metadata and metrics.
+/experiments/cp_child_20261028/selection/*.json -text
+/experiments/cp_child_20261028/metrics.csv -text
